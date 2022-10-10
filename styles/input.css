@@ -1,0 +1,18 @@
+
+.labelInput{
+    margin-bottom: 18px;
+}
+
+#userNameInput{
+    margin-bottom: 20px;
+    width: 320px;
+    height: 40px;
+
+    background-color: var(--color-grey-1);
+    color: var(--color-grey-7);
+
+    border: none;
+    border-radius: 4px;
+    padding: 0 13px;
+}
+

@@ -1,0 +1,25 @@
+
+h1{
+    font-weight: var(--font-w-2);
+    font-size: var(--font-s-1);
+}
+
+.descParag{
+    font-weight: var(--font-w-4);
+    font-size: var(--font-s-2);
+}
+
+.recentParag{
+    font-weight: var(--font-w-3);
+    font-size: var(--font-s-4);
+
+    margin-right: 20px;
+}
+
+.searchTitle{
+    font-weight: var(--font-w-3);
+    font-size: var(--font-s-2);
+
+    margin-bottom: 45px;
+}
+

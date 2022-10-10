@@ -1,1 +1,8 @@
 /* Desenvolva sua estilização aqui...*/
+
+.container {
+    display: flex;
+    height: 40em;
+    justify-content: center;
+}
+

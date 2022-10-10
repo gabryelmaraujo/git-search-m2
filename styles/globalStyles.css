@@ -1,8 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 :root{
     --color-brand-1: #C2255C;
@@ -14,4 +10,17 @@
     --color-grey-6:  #A6A8A9;
     --color-grey-7:  #FFFFFF;
     --color-alert:   #C22554;
+
+    --font-w-1: 700;
+    --font-w-2: 600;
+    --font-w-3: 500;
+    --font-w-4: 400;
+
+    --font-s-1: 32px;
+    --font-s-2: 20px;
+    --font-s-3: 18px;
+    --font-s-4: 16px;
+    --font-s-5: 14px
 }
+
+

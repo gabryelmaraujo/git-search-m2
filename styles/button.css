@@ -1,0 +1,11 @@
+
+.searchButton{
+    height: 40px;
+    border-radius: 4px;
+    border: 0;
+
+    background-color: rgba(194, 37, 92, 0.4);
+    color: rgba(255, 255, 255, 0.35);
+
+    cursor: pointer;
+}
