@@ -5,9 +5,11 @@ body{
 
 .profileContainer{
     color: var(--color-grey-7);
-    border: 1px solid black;
-    width: 700px;
+    width: 50vw;
     margin: 0 auto;
+    height: 100vh;
+
+    padding: 60px 0;
 }
 
 .profileHeader{
