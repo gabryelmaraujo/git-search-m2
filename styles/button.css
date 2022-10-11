@@ -1,4 +1,8 @@
 
+.anchToPerf{
+    width: 125px;
+}
+
 .searchButton{
     height: 40px;
     border-radius: 4px;
@@ -8,4 +12,8 @@
     color: rgba(255, 255, 255, 0.35);
 
     cursor: pointer;
+}
+
+.activedButton{
+    background-color: var(--color-brand-1);
 }

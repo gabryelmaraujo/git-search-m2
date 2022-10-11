@@ -23,3 +23,18 @@ h1{
     margin-bottom: 45px;
 }
 
+
+.anchorTextDiv {
+    background-color: var(--color-grey-7);
+    color: var(--color-grey-1);
+    
+    padding: 4px 8px;
+    width: 150px;
+    
+    position: relative;
+    right: 100%;
+}
+
+.anchorTextDivHidden {
+    display: none;
+}
