@@ -4,12 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/globalStyles.css" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="/pages/profile/index.css" />
+    <link rel="stylesheet" href="/pages/profile/styles/main.css">
+    <link rel="stylesheet" href="/pages/profile/styles/texts.css">
+
     <title>Nome do usuário Github</title>
   </head>
   <body>
-    <main></main>
+    <main class="profileContainer">
+      <header class="profileHeader">
+        <section class="userSection">
+          <div class="profileImgDiv">
+            <img src="/icontest.jpeg" alt="" class="profileImg">
+          </div>
+          <div class="profileInfosDiv">
+            <p class="profileName">Samuel Leão</p>
+            <p class="profileJob">UI Designer</p>
+          </div>
+        </section>
+        <div class="profileButtonsDiv">
+          <button class="emailBttn">Email</button>
+          <button class="changeUserBttn">Trocar de usuário</button>
+        </div>
+      </header>
+
+      <section class="reposSection">
+        <ul class="repoList">
+          <li class="repositories">
+            <div class="repoTitle"></div>
+            <div class="repoDesc"></div>
+            <div class="repoBttns"></div>
+          </li>
+        </ul>
+      </section>
+
+
+    </main>
     <script src="index.js"></script>
   </body>
 </html>

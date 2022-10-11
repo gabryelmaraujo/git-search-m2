@@ -1,0 +1,12 @@
+
+.profileName{
+    font-size: 24px;
+    font-weight: var(--font-w-1);
+    margin-bottom: 15px;
+}
+
+.profileJob{
+    font-size: var(--font-s-4);
+    font-weight: var(--font-w-3);
+    color: rgba(200, 200, 200, 0.5);
+}
