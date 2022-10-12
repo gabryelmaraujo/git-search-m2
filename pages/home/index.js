@@ -9,15 +9,40 @@ async function getUserInfos(user) {
     const dataJSON = await data.json()
         console.log(dataJSON)
 
-    const recentUl = document.querySelector('.recentUl')
-    recentUl.innerHTML = ''
+    const userAvatar = dataJSON.avatar_url
+    const userName = dataJSON.name
+    const userBio = dataJSON.bio
+    const userURL = dataJSON.url
+    const userReposUrl = dataJSON.repos_url
 
-    recentUl.insertAdjacentHTML('beforeend',`
+    const userObj = {
+        avatar: userAvatar,
+        name: userName,
+        bio: userBio,
+        url: userURL,
+        reposUrl: userReposUrl
+    }
+
+    if(recentUsersArr.length == 3){
+        recentUsersArr.splice(0, 1)
+        recentUsersArr.push(userObj)
+    }else{
+        recentUsersArr.push(userObj)
+    }
+
+    console.log(recentUsersArr)
+        
+    const recentUl = document.querySelector('.recentUl')
+        recentUl.insertAdjacentHTML('beforeend',`
         <li class = "recentIcon">
             <div class="recentImg">
-                <a href="${dataJSON.url}">
-                    <img src="${dataJSON.avatar_url}">
+                <a href="${userURL}">
+                    <img src="${userAvatar}">
                 </a>
+                <div class="anchorTextDiv" hidden>
+                    <p>Acessar este perfil</p>
+                </div>
+
             </div>
         </li>
     `)
@@ -29,14 +54,16 @@ searchButton.addEventListener('click', (e)=>{
     getUserInfos(userNameInput.value)
 })
 
-const recentUl = document.querySelector('.recentUl')
+// const recentUl = document.querySelector('.recentUl')
+// if(recentUl.childElementCount != 0){
+//     const recentAnchor = document.querySelector('.recentAnchor')
 
-if(recentUl.childElementCount != 0){
-    const recentAnchor = document.querySelector('.recentAnchor')
-
-    recentAnchor.addEventListener('mouseover', ()=>{
-        const anchorTextDiv = document.querySelector('.anchorTextDiv')
-        anchorTextDiv.classList.toggle('anchorTextDivHidden')
-    })
-}
-
+//     recentAnchor.addEventListener('mouseover', ()=>{
+//         const anchorTextDiv = document.querySelector('.anchorTextDiv')
+//         anchorTextDiv.hidden = false
+//     })
+//     recentAnchor.addEventListener('mouseout', ()=>{
+//         const anchorTextDiv = document.querySelector('.anchorTextDiv')
+//         anchorTextDiv.hidden = true
+//     })
+// }
