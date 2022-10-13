@@ -7,13 +7,13 @@ const userNotFound = document.querySelector('.userNotFound')
 searchButton.addEventListener('click',((e)=>{
 
 
-    const teste = async ()=>{
+    const localStorageSinc = async ()=>{
         return await toLocalStorage()
     }
     
     
-    const resolved = Promise.resolve(teste())
-    resolved.then(res => {
+    const promiseResolved = Promise.resolve(localStorageSinc())
+    promiseResolved.then(res => {
 
         if(res != undefined){
             userNotFound.classList.add('show')
@@ -22,7 +22,7 @@ searchButton.addEventListener('click',((e)=>{
 
             searchedUser()
     
-            // window.location.href='/pages/profile/index.html'
+            window.location.href='/pages/profile/index.html'
         }
     })
 
