@@ -2,7 +2,7 @@
 const searchButton = document.querySelector(".searchButton")
 
 const input = document.getElementById("userNameInput")
-
+const userNotFound = document.querySelector('.userNotFound')
 
 searchButton.addEventListener('click',((e)=>{
 
@@ -16,11 +16,13 @@ searchButton.addEventListener('click',((e)=>{
     resolved.then(res => {
 
         if(res != undefined){
-            console.log('errou')
+            userNotFound.classList.add('show')
         }else{
+            userNotFound.classList.remove('show')
+
             searchedUser()
     
-            window.location.href='/pages/profile/index.html'
+            // window.location.href='/pages/profile/index.html'
         }
     })
 

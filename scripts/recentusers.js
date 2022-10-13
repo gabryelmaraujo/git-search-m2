@@ -9,7 +9,7 @@ function getRecentSearchs(){
     
     if(usersArr.length > 0){
         usersArr.forEach((user)=>{
-            console.log(user)
+
             const avatar = user.userAvatar
             const name = user.userName
             const bio = user.userBio
