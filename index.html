@@ -55,19 +55,21 @@
             <h2>Procurar por um usuário</h2>
           </div>
           <div class="searchForm">
-            <form id="searchForm" action="/pages/profile/index.html">
+            <div id="searchForm">
               <label for="userNameInput" class='labelInput'>
                 Usuário github
               </label>
 
               <input type="text" name="userNameInput" id="userNameInput" placeholder="Digite um usuário do github aqui..." required>
 
+              <p class="userNotFound hidden">Usuário não encontrado</p>
 
-              <button type="submit" class="searchButton">
+
+              <button class="searchButton">
                 Ver perfil do github
               </button>
 
-            </form>
+            </div>
           </div>
         </main>
       </section>
@@ -76,5 +78,6 @@
     </main>
     <script src="/pages/home/index.js"></script>
     <script src="/scripts/recentusers.js"></script>
+    <script src="/scripts/profilerender.js"></script>
   </body>
 </html>

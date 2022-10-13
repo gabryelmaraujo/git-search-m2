@@ -35,6 +35,15 @@ h1{
     right: 100%;
 }
 
-/* .anchorTextDivHidden {
-    display:;
-} */
+.userNotFoundBorder {
+    border: 1px solid rgba(255, 0, 0, 0.555);
+}
+
+.userNotFound{
+    color: rgba(255, 0, 0, 0.555);
+    display: none;
+}
+
+.show {
+    display: block;
+}

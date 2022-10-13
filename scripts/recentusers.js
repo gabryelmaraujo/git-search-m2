@@ -3,7 +3,9 @@ let recentUsersArr = []
 
 function getRecentSearchs(){
 
-    const usersArr = JSON.parse(localStorage.getItem("@GitSearch/UserData:"))
+    const users = JSON.parse(localStorage.getItem("@GitSearch/UserData:"))
+
+    let usersArr = Array.from(users)
     
     if(usersArr.length > 0){
         usersArr.forEach((user)=>{
@@ -15,7 +17,6 @@ function getRecentSearchs(){
             const repos = user.userReposUrl
 
             const recentUl = document.querySelector('.recentUl')
-            recentUl.innerHTML=''
 
             recentUl.insertAdjacentHTML('beforeend', `
                 <li class="recentIcon">
