@@ -24,7 +24,7 @@ function getRecentSearchs(){
                         <a href="/pages/profile/index.html">
                             <img src="${avatar}">
                         </a>
-                        <div class="anchorTextDiv" hidden>
+                        <div class="anchorTextDiv">
                             <p>Acessar este perfil</p>
                         </div>
 
@@ -32,8 +32,15 @@ function getRecentSearchs(){
                 </li>
 
             `)
-
         })
     }
 }
 getRecentSearchs()
+
+
+const recentImg = document.querySelector('.recentImg')
+const anchorTextDiv = document.querySelector('.anchorTextDiv')
+
+recentImg.addEventListener('mouseover', () => {
+    anchorTextDiv.classList.toggle('show')
+})
