@@ -11,23 +11,16 @@ function getRecentSearchs(){
         usersArr.forEach((user)=>{
 
             const avatar = user.userAvatar
-            const name = user.userName
-            const bio = user.userBio
-            const url = user.userURL
-            const repos = user.userReposUrl
+            const login = user.login
 
             const recentUl = document.querySelector('.recentUl')
 
             recentUl.insertAdjacentHTML('beforeend', `
                 <li class="recentIcon">
                     <div class="recentImg">
-                        <a href="/pages/profile/index.html">
+                        <a href="/pages/profile/index.html" class="recentAnchor qtip tip-bottom" data-tip="Acessar este perfil">
                             <img src="${avatar}">
                         </a>
-                        <div class="anchorTextDiv">
-                            <p>Acessar este perfil</p>
-                        </div>
-
                     </div>
                 </li>
 
@@ -38,9 +31,27 @@ function getRecentSearchs(){
 getRecentSearchs()
 
 
-const recentImg = document.querySelector('.recentImg')
-const anchorTextDiv = document.querySelector('.anchorTextDiv')
 
-recentImg.addEventListener('mouseover', () => {
-    anchorTextDiv.classList.toggle('show')
+const recentAnchor = document.querySelector('.recentAnchor')
+recentAnchor.addEventListener('click', ()=>{
+
+    const users = JSON.parse(localStorage.getItem("@GitSearch/UserData:"))
+    let usersArr = Array.from(users)
+
+    usersArr.forEach((user) =>{
+        const login = user.login
+
+        let userArr = []
+
+        if(userArr != 0){
+            userArr.splice()
+            userArr.push(login)
+        }else{
+            userArr.push(login)
+        }
+    
+        localStorage.setItem("@GitSearc/SearchedUser:", JSON.stringify(userArr))
+
+    })
+
 })

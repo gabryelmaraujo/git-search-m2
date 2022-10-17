@@ -37,3 +37,6 @@
     border: 2px solid var(--color-brand-1);
 
 }
+.recentImg img:hover{
+    border: 1px solid white; 
+}

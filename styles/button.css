@@ -16,4 +16,64 @@
 
 .activedButton{
     background-color: var(--color-brand-1);
+    color: var(--color-grey-7);
 }
+
+
+.qtip {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color: #3bb4e5;
+  box-sizing: border-box;
+  font-style: normal;
+  transition:all .25s ease-in-out
+}
+
+.qtip:before {
+  content: attr(data-tip);
+  font-size: 12px;
+  position: absolute;
+  background: var(--color-grey-7);
+  color: var(--color-grey-2);
+  line-height: 1.2em;
+  padding: 4px 8px;
+  font-style: normal;
+
+  min-width: 120px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+
+  font-family: sans-serif;
+  letter-spacing: 0;
+  font-weight: 400
+}
+.qtip:after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  content: '';
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out
+}
+.qtip:hover:before,
+.qtip:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+.qtip.tip-bottom:before {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(50% + 8px));
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  .qtip.tip-bottom:after {
+    border-color: transparent transparent var(--color-grey-7) transparent;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }

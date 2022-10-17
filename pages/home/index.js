@@ -90,4 +90,4 @@ async function getUserInfos(user){
     }
 
 }
-// getUserInfos("ncjkandjj")
+
